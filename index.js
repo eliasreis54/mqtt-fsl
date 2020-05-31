@@ -5,7 +5,7 @@ client.on('connect', () => {
   console.log('connected');
 });
 
-client.subscribe('/admin/ea865d/attrs').on('message', function (topic, message) {
+client.subscribe('/admin/9ece52/attrs').on('message', function (topic, message) {
   // message is Buffer
   console.log(message.toString())
 });
@@ -13,5 +13,5 @@ client.subscribe('/admin/ea865d/attrs').on('message', function (topic, message) 
 
 setInterval(() => {
   console.log('acbou o tempo');
-  client.publish('/admin/ea865d/attrs',  JSON.stringify({ temperatura: Math.random(), humidade: Math.random() }));
+  client.publish('/admin/9ece52/attrs',  JSON.stringify({ temperatura: Math.random(), humidade: Math.random() }));
 }, 1000);
